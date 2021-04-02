@@ -73,7 +73,54 @@ void validarCPF(S s){
     }
 }
 
+void validarData(S s){
+    int num,Dia,Mes,Ano, idade;
 
+    Dia = num / 1000000;
+    Mes = (num % 1000000)/10000;
+    Ano = (num % 1000000)%10000;
+
+    if(Dia>31){
+    
+        printf("Data invalida.\n");
+        return 0;
+    
+    }
+
+    else if(Mes>12){
+        
+        printf("Data invalida.\n");
+        return 0;
+
+    }
+
+    else if((Mes==2)&&(Dia>28)){
+    
+    printf("data invalida.\n");
+    return 0;
+    
+    }
+
+    else if((Dia>30)&&(Mes==4)||(Mes==6)||(Mes==9)||(Mes==11)){
+        printf("data invalida.\n");
+        return 0;
+    }
+ 
+    idade = 2019-Ano;
+ 
+    if((Dia>30)&&(Mes>=7)||(Dia<31)&&(Mes>=7))
+    idade=idade-1;
+    
+    if(idade<18){
+    printf("nao e possivel continuar o desafio, pois voce e menor de idade %d anos\n",idade);
+    return 0;
+    
+    }
+
+    else
+    printf("Voce pode dar continuidade ao desafio, pois  possui %d anos\n",idade);
+
+}
 
 
 
