@@ -14,11 +14,20 @@ void ler3Letras(){
 
 }
 
+//Verificar retorno
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    ler3Letras();
+    int i;
+
+    for (i = 0; i < 3; i++)
+    {
+        /* code */
+        ler3Letras();
+
+    }
+    
 
     
     return 0;
