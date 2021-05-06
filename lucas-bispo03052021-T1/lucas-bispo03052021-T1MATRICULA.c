@@ -388,7 +388,7 @@ int q6(int numerobase, int numerobusca)
     return qtdOcorrencias;*/
 
 
-}
+//}
 
 
  /*3 - Escreva uma função recursiva que determine quantas vezes um dígito K ocorre em um número natural N.
