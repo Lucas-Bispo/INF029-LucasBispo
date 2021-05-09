@@ -75,55 +75,46 @@ int fatorial(int x)
     Não utilizar funções próprias de string (ex: strtok)   
     pode utilizar strlen para pegar o tamanho da string
 */
-int q1(char *data)
+int q1(char *d)
 {
-	
-    
-    
-	
-    int k;
-    int l;
-	
-    
+    int y; 
+    int x; 
 	
     //quebrar a string data em strings sDia, sMes, sAno
-	int datavalida = 1;
+	int dv = 1; 
 	
-    int mesf;
-    int diaf;
-    int anof;
-    int ndia;
-    int nmes;
-    int nano;
+    int mf; 
+    int df; 
+    int af; 
+    int nd; 
+    int nm; 
+    int na; 
 	
     //quebrar a string data em strings sDia, sMes, sAno
 	
-	
-	
-	
-	char sDia[3];
-	char sMes[3];
-	char sAno[5];
+	char sD[3];
+	char sM[3];
+	char sA[5];
 	int i;
 	
-	for (i = 0; data[i] != '/'; i++){
-		sDia[i] = data[i];	
+	for (i = 0; d[i] != '/'; i++){
+		sD[i] = d[i];	
 	}
 	if(i == 1 || i == 2){ // testa se tem 1 ou dois digitos
-		sDia[i] = '\0';  // coloca o barra zero no final
+		sD[i] = '\0';  // coloca o barra zero no final
 	}else 
 	return 0;
 	
 	
 	int j = i + 1; //anda 1 cada para pular a barra
 	i = 0;
-	for (; data[j] != '/'; j++){
-		sMes[i] = data[j];
+	for (; d[j] != '/'; j++){
+		sM[i] = d[j];
 		i++;
 	}
 	
 	if(i == 1 || i == 2){ // testa se tem 1 ou dois digitos
-		sMes[i] = '\0';  // coloca o barra zero no final
+		sM[i] = '\0';  // coloca o barra zero no final
 	}else
 	return 0;
 	
@@ -131,45 +122,34 @@ int q1(char *data)
 	j = j + 1; //anda 1 cada para pular a barra
 	i = 0;
 	
-	for(; data[j] != '\0'; j++){
-	 	sAno[i] = data[j];
+	for(; d[j] != '\0'; j++){
+	 	sA[i] = d[j];
 	 	i++;
 	}
 	
 	if(i == 2 || i == 4){ // testa se tem 2 ou 4 digitos
-		sAno[i] = '\0';  // coloca o barra zero no final
+		sA[i] = '\0';  // coloca o barra zero no final
 	}else
 	return 0;
 	
 	
 	//imprimir os valores apenas para teste
 	printf("---------------");
-	printf("Data: %s\n", data);	
-	printf("Dia: %s\n", sDia);
-	printf("Mes: %s\n", sMes);
-	printf("Ano: %s\n", sAno);
+	printf("Data: %s\n", d);	
+	printf("Dia: %s\n", sD);
+	printf("Mes: %s\n", sM);
+	printf("Ano: %s\n", sA);
 	
 	return 1; 
 	
-	
-	
-	
-	
-	
-	
-	
     //converter sDia, sMes e sAno em inteiros (ex: atoi)
-	diaf=atoi(sDia);
-	mesf=atoi(sMes);
-	anof=atoi(sAno);
+	df=atoi(sD);
+	mf=atoi(sM);
+	af=atoi(sA);
 	
     //criar as variáveis iDia, iMes, iAno
 	
-    
-	
-    
-	
-    switch (mesf)
+    switch (mf)
     {
 		case 1:
 		case 3:
@@ -179,7 +159,7 @@ int q1(char *data)
 		case 10:
 		case 12:
 		{
-			if (diaf < 1 || diaf > 31)
+			if (df < 1 || df > 31)
 			{
 				return 0;
 			}
@@ -190,7 +170,7 @@ int q1(char *data)
 		case 9:
 		case 11:
 		{
-			if (diaf < 1 || diaf > 30)
+			if (df < 1 || df > 30)
 			{
 				return 0;
 			}
@@ -198,12 +178,12 @@ int q1(char *data)
 		}
 		case 2:
 		{
-			if (diaf == 29 && (anof/4==0))
+			if (df == 29 && (af/4==0))
 			{
 				
 				return 1;
 			}
-			else if (diaf < 1 || diaf > 28)
+			else if (df < 1 || df > 28)
 			{
 				return 0;
 			}
@@ -213,17 +193,15 @@ int q1(char *data)
 		return 0;
 	}
 	
-	
-	
 	//validacao do ano
-	if(anof<1000||anof>9999){
+	if(af<1000||af>9999){
 		return 0;
 	}
 	else{
 		return 1;
 	}
 	//ano bissexto
-	if((anof%100==1&&anof%4==0)||anof%400==0){
+	if((af%100==1&&af%4==0)||af%400==0){
 		return 1;
 	}
 	else{
@@ -231,7 +209,7 @@ int q1(char *data)
 	}
 	//printf("%s\n", data);
 	
-	if (datavalida){
+	if (dv){
 		return 1;
 	}
     
