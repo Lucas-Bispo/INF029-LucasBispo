@@ -132,7 +132,6 @@ int q1(char *d)
 	}else
 	return 0;
 	
-	
 	//imprimir os valores apenas para teste
 	printf("---------------");
 	printf("Data: %s\n", d);	
