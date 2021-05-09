@@ -228,34 +228,34 @@ int q1(char *d)
     3 -> datafinal inválida
     4 -> datainicial > datafinal
 */
-int q2(char *datainicial, char *datafinal, int *qtdDias, int *qtdMeses, int *qtdAnos)
+int q2(char *di, char *df, int *qtdD, int *qtdM, int *qtdA)
 {
 	
     //calcule os dados e armazene nas três variáveis a seguir
-    int nDias, nMeses, nAnos;
+    int nD, nM, nA;
 	
-    if (q1(datainicial) == 0)
+    if (q1(di) == 0)
 	return 2;
 	
-    nDias = 4;
-    nMeses = 10;
-    nAnos = 2;
+    nD = 4;
+    nM = 10;
+    nA = 2;
 	
     /*mantenha o código abaixo, para salvar os dados em 
 		nos parâmetros da funcao
 	*/
-    *qtdDias = nDias;
-    *qtdAnos = nAnos;
-    *qtdMeses = nMeses;
+    *qtdD = nD;
+    *qtdA = nA;
+    *qtdM = nM;
 	
     //coloque o retorno correto
     return 1;
 }
-void converteTextoParaMaiuscula(char *texto)
+void converteTextoParaMaiuscula(char *t)
 {
     int i;
-    for (i = 0; texto[i] != '\0'; i++)
-        texto[i] = toupper(texto[i]);
+    for (i = 0; t[i] != '\0'; i++)
+        t[i] = toupper(t[i]);
 }
 /*
 	Q3 = encontrar caracter em texto
