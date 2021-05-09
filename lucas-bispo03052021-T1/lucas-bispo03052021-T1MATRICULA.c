@@ -267,26 +267,26 @@ void converteTextoParaMaiuscula(char *t)
 	@saida
     Um número n >= 0.
 */
-int q3(char *texto, char c, int isCaseSensitive)
+int q3(char *t, char L, int iCS)
 {
-    int qtdOcorrencias = 0;
+    int qtdO = 0;
     int i;
 
-    if (isCaseSensitive == 0)
+    if (iCS == 0)
     {
-        converteTextoParaMaiuscula(texto);
-        c = toupper(c);
+        converteTextoParaMaiuscula(t);
+        L = toupper(L);
     }
 
-    for (i = 0; texto[i] != '\0'; i++)
+    for (i = 0; t[i] != '\0'; i++)
     {
-        if (texto[i] == c)
+        if (t[i] == L)
         {
-            qtdOcorrencias++;
+            qtdO++;
         }
     }
 
-    return qtdOcorrencias;
+    return qtdO;
 }
 
 
