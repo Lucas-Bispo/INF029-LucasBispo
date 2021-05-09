@@ -289,9 +289,6 @@ int q3(char *t, char L, int iCS)
     return qtdO;
 }
 
-
-
-
 /*
 	Q4 = encontrar palavra em texto
 	@objetivo
@@ -307,11 +304,11 @@ int q3(char *t, char L, int iCS)
 	O retorno da função, n, nesse caso seria 1;
 	
 */
-int q4(char *strTexto, char *strBusca, int posicoes[30])
+int q4(char *strT, char *strB, int p[30])
 {
-    int qtdOcorrencias = -1;
+    int qtdO = -1;
 	
-    return qtdOcorrencias;
+    return qtdO;
 }
 
 /*
