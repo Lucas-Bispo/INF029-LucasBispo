@@ -77,24 +77,15 @@ int fatorial(int x)
 */
 int q1(char *d)
 {
-    int y; 
-    int x; 
+    int y, x; 
 	
     //quebrar a string data em strings sDia, sMes, sAno
 	int dv = 1; 
 	
-    int mf; 
-    int df; 
-    int af; 
-    int nd; 
-    int nm; 
-    int na; 
+    int mf, df, af, nd, nm,na; 
 	
     //quebrar a string data em strings sDia, sMes, sAno
-	
-	char sD[3];
-	char sM[3];
-	char sA[5];
+	char sD[3],sM[3], sA[5];
 	int i;
 	
 	for (i = 0; d[i] != '/'; i++){
