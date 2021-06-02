@@ -61,7 +61,8 @@ int main(){
                 if (qtd == POSICAO_INVALIDA){
                     printf ("Posição inválida");
                 }else{ // existe elemento
-                    int vetorAux[qtd];
+                    int vetorAux[1];
+                    vetorAux[qtd];
                 
                     retorno = getDadosEstruturaAuxiliar(posicao, vetorAux);
                     
