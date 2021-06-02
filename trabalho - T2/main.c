@@ -63,7 +63,6 @@ int main(){
                 }else{ // existe elemento
                     int vetorAux[1];
                     vetorAux[qtd];
-                
                     retorno = getDadosEstruturaAuxiliar(posicao, vetorAux);
                     
                     if (retorno == SUCESSO){
