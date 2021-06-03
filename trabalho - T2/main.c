@@ -8,7 +8,7 @@ int menu();
 void dobrar(int *x);
 
 int menu(){
-    int op;
+    int opcao;
     printf("Digite as opção desejada\n");
     printf("0 - Sair\n");
     printf("1 - Inserir\n");
@@ -16,18 +16,18 @@ int menu(){
     printf("3 - Listar uma estrutura\n");
     printf("4 - Dobrar Numero\n");
     printf("5 - \n");
-    scanf("%d", &op);
-    return op;
+    scanf("%d", &opcao);
+    return opcao;
 }
 
 int main(){
     inicializar();
-    int op;
+    int opcao2;
     int sair = 0;
     int ret;
     while (!sair){
-        op = menu();
-        switch (op){
+        opcao2 = menu();
+        switch (opcao2){
             case 0:{
                 sair =1;
                 finalizar();
