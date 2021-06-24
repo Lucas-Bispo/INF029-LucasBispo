@@ -7,17 +7,7 @@
 // constante anterior mais 1, caso nao haja valor algum na primeira constante ela vai ser inicializada com 0
 enum
 {
-  TODAS_ESTRUTURAS_AUXILIARES_VAZIAS = -11,
-  NOVO_TAMANHO_INVALIDO,
-  NUMERO_INEXISTENTE,
-  ESTRUTURA_AUXILIAR_VAZIA,
-  TAMANHO_INVALIDO,
-  SEM_ESPACO_DE_MEMORIA,
-  POSICAO_INVALIDA,
-  JA_TEM_ESTRUTURA_AUXILIAR,
-  SEM_ESTRUTURA_AUXILIAR,
-  SEM_ESPACO,
-  SUCESSO
+  teav = -11,nti,ni,eav,ti,sedm,pi,jtea,sea,se,s
 };
 
 typedef struct reg

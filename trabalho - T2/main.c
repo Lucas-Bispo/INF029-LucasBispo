@@ -9,22 +9,14 @@ void dobrar(int *x);
 
 int menu(){
     int opcao;
-    printf("Digite as opção desejada\n");
-    printf("0 - Sair\n");
-    printf("1 - Inserir\n");
-    printf("2 - Excluir\n");
-    printf("3 - Listar uma estrutura\n");
-    printf("4 - Dobrar Numero\n");
-    printf("5 - \n");
+    printf("Digite as opção desejada\n0 - Sair\n1 - Inserir\n2 - Excluir\n3 - Listar uma estrutura\n4 - Dobrar Numero\n5 - \n");
     scanf("%d", &opcao);
     return opcao;
 }
 
 int main(){
-    inicializar();
-    int opcao2;
-    int sair = 0;
-    int ret;
+    iniciar();
+    int opcao2,sair = 0,ret;
     while (!sair){
         opcao2 = menu();
         switch (opcao2){
@@ -36,16 +28,15 @@ int main(){
             case 1:{ //inserir
                 //TODO
                 ret = inserirNumeroEmEstrutura(25, 5);
-                if (ret == SUCESSO){
+                if (ret == s){
                 	printf("Inserido com sucesso");
-                }else if (ret == SEM_ESPACO){
+                }else if (ret == se){
                 	printf("Sem Espaço");
-                }else if (ret == SEM_ESTRUTURA_AUXILIAR){
+                }else if (ret == sea){
                 	printf("Sem estrutura Auxiliar");	
                 }
                 break;
             }
-
             case 2:{ //excluir
                 //TODO
                 break;
@@ -58,14 +49,14 @@ int main(){
                 
                 int qtd =  getQuantidadeElementosEstruturaAuxiliar(posicao);
                 
-                if (qtd == POSICAO_INVALIDA){
+                if (qtd == pi){
                     printf ("Posição inválida");
                 }else{ // existe elemento
                     int vetorAux[1];
                     vetorAux[qtd];
                     retorno = getDadosEstruturaAuxiliar(posicao, vetorAux);
                     
-                    if (retorno == SUCESSO){
+                    if (retorno == s){
                         //imprimir para os dados para o usuário
                         int i = 0;
                         for (; i < qtd; i++){
@@ -84,24 +75,15 @@ int main(){
                 scanf("%i", &valor);
                 
                 dobrar(&valor);
-                
                 //passar para um funcao (void dobrar(...)) que recebe o numero e dobra (EstruturaVetores.c)
-                
-                printf("%i", valor);
-                
+                printf("%i", valor);   
                 break;
             }
-            
             default:{
                 printf("opcao inválida\n");
-            }
-
-            
-        }
-        
-        
+            }   
+        }   
     }
-    
     return 0;
     
 }
