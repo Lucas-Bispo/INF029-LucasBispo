@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define TAM 10
 
-#include "EstruturaVetores.h"
+#include "EV.h"
 int ehPosicaoValida(int posicao);
 
 typedef struct Elem
@@ -34,7 +34,7 @@ int cEA(int posicao, int tamanho)
 	// internamente é de 0 a 9
 	// if (posicao - 1 < 0 || posicao - 1 > 9)
 	//if (posicao < 1 || posicao > 10)
-	if (ehPosicaoValida(posicao) == pi)
+	if (ePV(posicao) == pi)
 	{
 		// se posição é um valor válido {entre 1 e 10}
 		retorno = pi;
@@ -78,7 +78,7 @@ int cEA(int posicao, int tamanho)
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 	CONSTANTES
 */
-int inserirNumeroEmEstrutura(int posicao, int valor)
+int iNEE(int posicao, int valor)
 {
 	
 	int retorno = 0;
@@ -86,7 +86,7 @@ int inserirNumeroEmEstrutura(int posicao, int valor)
 	int posicao_invalida = 0;
 	
 	//if (posicao < 1 || posicao > 10)
-	if (ehPosicaoValida(posicao) == pi)
+	if (ePV(posicao) == pi)
 	{
 		// se posição é um valor válido {entre 1 e 10}
 		retorno = pi;
@@ -128,14 +128,14 @@ int inserirNumeroEmEstrutura(int posicao, int valor)
     SEM_ESTRUTURA_AUXILIAR - Não tem estrutura auxiliar
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 */
-int excluirNumeroDoFinaldaEstrutura(int posicao)
+int eNDFaE(int posicao)
 
 {
 	
 	int retorno;
 	
 	//if (posicao < 1 || posicao > 10)
-	if (ehPosicaoValida(posicao) == pi)
+	if (ePV(posicao) == pi)
 	{
 		// se posição é um valor válido {entre 1 e 10}
 		retorno =	 pi;
@@ -170,12 +170,12 @@ int excluirNumeroDoFinaldaEstrutura(int posicao)
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 	
 */
-int excluirNumeroEspecificoDeEstrutura(int posicao, int valor)
+int eNEDE(int posicao, int valor)
 {
 	
 	int retorno;
 	
-	if (ehPosicaoValida(posicao) == pi)
+	if (ePV(posicao) == pi)
 	{
 		retorno = pi;
 	}
@@ -209,7 +209,7 @@ int excluirNumeroEspecificoDeEstrutura(int posicao, int valor)
 }
 
 // se posição é um valor válido {entre 1 e 10}
-int ehPosicaoValida(int posicao)
+int ePV(int posicao)
 {
 	int retorno = 0;
 	if (posicao < 1 || posicao > 10)
@@ -230,11 +230,11 @@ int ehPosicaoValida(int posicao)
     SEM_ESTRUTURA_AUXILIAR - Não tem estrutura auxiliar
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 */
-int getDadosEstruturaAuxiliar(int posicao, int vetorAux[])
+int gDEA(int posicao, int vetorAux[])
 {
 	
 	int retorno;
-	if (ehPosicaoValida(posicao) == pi)
+	if (ePV(posicao) == pi)
 	{
 		retorno = pi;
 	}
@@ -263,7 +263,7 @@ int getDadosEstruturaAuxiliar(int posicao, int vetorAux[])
     SEM_ESTRUTURA_AUXILIAR - Não tem estrutura auxiliar
     POSICAO_INVALIDA - Posição inválida para estrutura auxiliar
 */
-int getDadosOrdenadosEstruturaAuxiliar(int posicao, int vetorAux[])
+int gDOEA(int posicao, int vetorAux[])
 {
 	int troca;
 	int retorno = 0;
@@ -303,7 +303,7 @@ int getDadosOrdenadosEstruturaAuxiliar(int posicao, int vetorAux[])
     SUCESSO - recuperado com sucesso os valores da estrutura na posição 'posicao'
 	TODAS_ESTRUTURAS_AUXILIARES_VAZIAS - todas as estruturas auxiliares estão vazias
 */
-int getDadosDeTodasEstruturasAuxiliares(int vetorAux[])
+int gDDTEA(int vetorAux[])
 {
 	int retorno = 0,k = 0, cont = 0;
 	for(int i=0;i<10;i+=1){ 
@@ -332,7 +332,7 @@ int getDadosDeTodasEstruturasAuxiliares(int vetorAux[])
     SEM_ESTRUTURA_AUXILIAR - Não tem estrutura auxiliar
     
 */
-int getDadosOrdenadosDeTodasEstruturasAuxiliares(int vetorAux[])
+int gDODTEA(int vetorAux[])
 {
 	int i,TE,j,k = 0,aux,retorno = 0,jj, kk,contador = 0;
 	TE = 0;
@@ -379,7 +379,7 @@ int getDadosOrdenadosDeTodasEstruturasAuxiliares(int vetorAux[])
     NOVO_TAMANHO_INVALIDO - novo tamanho não pode ser negativo
     SEM_ESPACO_DE_MEMORIA - erro na alocação do novo valor
 */
-int modificarTamanhoEstruturaAuxiliar(int posicao, int novoTamanho)
+int mTEA(int posicao, int novoTamanho)
 {
 	int retorno = 0, t, mi;
 
@@ -477,7 +477,7 @@ void destruirListaEncadeadaComCabecote(No **inicio)
 	
 */
 
-void iniciar()
+void i()
 {
 	int i;
 	for (i = 0; i < TAM; i++)

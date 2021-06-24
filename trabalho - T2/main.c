@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-#include "EstruturaVetores.h"
+#include "EV.h"
 
 int menu();
 
@@ -15,19 +15,19 @@ int menu(){
 }
 
 int main(){
-    iniciar();
+    i();
     int opcao2,sair = 0,ret;
     while (!sair){
         opcao2 = menu();
         switch (opcao2){
             case 0:{
                 sair =1;
-                finalizar();
+                f();
                 break;
             }
             case 1:{ //inserir
                 //TODO
-                ret = inserirNumeroEmEstrutura(25, 5);
+                ret = iNEE(25, 5);
                 if (ret == s){
                 	printf("Inserido com sucesso");
                 }else if (ret == se){
@@ -43,18 +43,18 @@ int main(){
             }
 
             case 3:{ //recuperar dados estrutura auxiliar
-                int posicao, retorno;
+                int p, retorno;
                 printf("Qual a estrutura a ser listada (1..10)?");
-                scanf("%d", &posicao);
+                scanf("%d", &p);
                 
-                int qtd =  getQuantidadeElementosEstruturaAuxiliar(posicao);
+                int qtd =  gQEEA(p);
                 
                 if (qtd == pi){
                     printf ("Posição inválida");
                 }else{ // existe elemento
                     int vetorAux[1];
                     vetorAux[qtd];
-                    retorno = getDadosEstruturaAuxiliar(posicao, vetorAux);
+                    retorno = gDEA(p, vetorAux);
                     
                     if (retorno == s){
                         //imprimir para os dados para o usuário
@@ -74,7 +74,7 @@ int main(){
                 int valor;
                 scanf("%i", &valor);
                 
-                dobrar(&valor);
+                d(&valor);
                 //passar para um funcao (void dobrar(...)) que recebe o numero e dobra (EstruturaVetores.c)
                 printf("%i", valor);   
                 break;
